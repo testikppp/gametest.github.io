@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Автокликер</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+        #coin {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            border-radius: 50%;
+            margin: 20px auto;
+            cursor: pointer;
+            line-height: 100px; /* Vertically center text */
+            font-size: 2em;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Автокликер</h1>
+    <div id="coin">0</div>
+    <p>Монеты: <span id="score">0</span></p>
+
+    <script>
+        let score = 0;
+        let coinElement = document.getElementById('coin');
+        let scoreElement = document.getElementById('score');
+        let autoClickInterval;
+
+        coinElement.addEventListener('click', () => {
+            score++;
+            scoreElement.textContent = score;
+        });
+
+        function startAutoClick() {
+            // Вместо реального автокликера, который может нарушать правила,
+            // просто увеличиваем счет каждую секунду.  Это демонстрация!
+            autoClickInterval = setInterval(() => {
+                score++;
+                scoreElement.textContent = score;
+            }, 1000); // Увеличиваем счет каждую секунду (1000 мс)
+        }
+
+
+        Telegram.WebApp.ready(); // Говорим Telegram, что наше приложение готово.
+
+        // Запускаем "автокликер" при загрузке страницы
+        startAutoClick();
+
+
+       // Пример отправки данных в Telegram (необязательно)
+       //  Telegram.WebApp.sendData("Счет: " + score);
+    </script>
+</body>
+</html>
