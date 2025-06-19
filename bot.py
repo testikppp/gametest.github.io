@@ -9,7 +9,7 @@ from aiogram.types import WebAppInfo, InlineKeyboardButton, InlineKeyboardMarkup
 BOT_TOKEN = '7518402666:AAF-_u9v27wo0ziBFk1Ycb7EJ9fw1T1qpyM'
 
 # URL вашего мини-приложения (должен быть HTTPS)
-WEB_APP_URL = 'https://your-web-app-url.com'  # Замените на URL вашего мини-приложения
+WEB_APP_URL = 'https://testikppp.github.io/gametest.github.io/'  # Замените на URL вашего мини-приложения
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
